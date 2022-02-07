@@ -83,9 +83,9 @@ public class StepTracker {
                 bestDays = 0;
             }
         }
-        for (Integer ferr : daySeries) {
-            if (ferr > bestSeries) {
-                bestSeries = ferr;
+        for (Integer days: daySeries) {
+            if (days > bestSeries) {
+                bestSeries = days;
             }
         }
         System.out.println("Лучшая серия: " + bestSeries);
