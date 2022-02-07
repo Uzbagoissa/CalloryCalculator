@@ -21,13 +21,37 @@ public class Main {
 
             if (command == 1){
                 System.out.println("Введите месяц числом");
-                int month = scanner.nextInt();
+                int month;
+                while (true){
+                    month = scanner.nextInt();
+                    if (month < 1 || month > 12){
+                        System.out.println("Введите существующий номер месяца");
+                    } else {
+                        break;
+                    }
+                }
                 System.out.println(month);
                 System.out.println("Введите день");
-                int day = scanner.nextInt();
+                int day;
+                while (true){
+                    day = scanner.nextInt();
+                    if (day < 1 || day > 31){
+                        System.out.println("Введите существующий номер дня");
+                    } else {
+                        break;
+                    }
+                }
                 System.out.println(day);
                 System.out.println("Напишите, какое количество шагов вы прошли за этот день?");
-                int stepsByDay = scanner.nextInt();
+                int stepsByDay;
+                while (true){
+                    stepsByDay = scanner.nextInt();
+                    if (stepsByDay < 0){
+                        System.out.println("Введите число больше 0");
+                    } else {
+                        break;
+                    }
+                }
                 stepTracker.saveSteps(month, day, stepsByDay);
 
             } else if (command == 2){

@@ -1,12 +1,14 @@
 public class Converter {
 
     double getDistance(double steps){
-        double distance = (steps * 75)/100000;
-        return distance;
+        double stepLengthSm = 75;
+        double smetersToKmeters = 100000;
+        return (steps * stepLengthSm)/smetersToKmeters;
     }
 
     double getCCal(double steps){
-        double CCal = (steps * 50)/1000;
-        return CCal;
+        double stepCal = 50;
+        double calCcal = 1000;
+        return (steps * stepCal)/calCcal;
     }
 }
